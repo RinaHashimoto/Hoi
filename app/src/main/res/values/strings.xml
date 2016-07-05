@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">あっち向いてホイ</string>
+    <string name="start">START</string>
+    <string name="returnb">RETURN</string>
+    <string name="oneTime">1 TIME</string>
+    <string name="threeTimes">3 TIMES</string>
+    <string name="fiveTimes">5 TIMES</string>
+    <string name="janken">じゃ〜んけ〜ん</string>
+    <string name="pon">ぽん！</string>
+    <string name="aiko">あ〜いこ〜で</string>
+    <string name="shoi">しょい！</string>
+    <string name="next">次へ</string>
+    <string name="acchimuite">あっち向いて〜？</string>
+    <string name="hoi">ほい！</string>
+    <string name="result">２対１であなたの勝ち！</string>
+    <string name="title_activity_select_times">selectTimes</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_janken">jankenActivity</string>
+</resources>

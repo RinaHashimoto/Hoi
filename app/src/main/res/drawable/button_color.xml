@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- ボタンが押されている -->
+    <item android:state_pressed="true"
+        android:state_focused="false">
+        <layer-list>
+            <item>
+                <shape
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:shape="rectangle">
+                    <solid
+                        android:color="@color/colorAccent" />
+                    <corners
+                        android:radius="2dip" />
+                    <stroke
+                        android:width="0.5dip"
+                        android:color="#000000" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
