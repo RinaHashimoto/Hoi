@@ -15,6 +15,7 @@ public class jankenActivity extends AppCompatActivity {
 
 
     public void onClick(View view) {
+
         switch (view.getId()) {
             case R.id.btngu:
                 Intent intentG = new Intent(this, jankenResultActivity.class);
@@ -32,6 +33,7 @@ public class jankenActivity extends AppCompatActivity {
                 startActivity(intentP);
                 break;
         }
+
     }
 
 }

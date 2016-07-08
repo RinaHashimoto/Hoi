@@ -1,137 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context="com.example.rina.hoi.jankenActivity">
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
         android:text="@string/janken"
-        android:textSize="40sp"/>
+        android:textSize="20pt"/>
     <ImageView
-        android:layout_width="800px"
-        android:layout_height="800px"
-        android:padding="100px"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:padding="30px"
         android:adjustViewBounds="true"
         android:id="@+id/imgjankenface"
         android:scaleType="centerInside"
-        android:layout_centerHorizontal="true"
         android:src="@drawable/frog_front"/>
+<!--
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
         android:id="@+id/frame1">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <View
+        -->
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:columnCount="5"
+            android:rowCount="2">
+            <ImageButton
                 android:layout_width="100dp"
-                android:layout_height="250dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
-                android:id="@+id/center2"/>
-            <View
-                android:layout_width="300dp"
-                android:layout_height="150dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
-                android:id="@+id/center3"/>
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_above="@id/center2"
-                android:layout_alignLeft="@+id/center2"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"
+                android:id="@+id/btngu"
                 android:src="@drawable/rock"
-                android:id="@+id/imggu"/>
-            <ImageView
+                android:onClick="onClick"/>
+            <ImageButton
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_toLeftOf="@id/center3"
-                android:layout_alignTop="@+id/center3"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"
                 android:src="@drawable/scissors"
-                android:id="@+id/imgshoki"/>
-            <ImageView
+                android:id="@+id/btnchoki"
+                android:onClick="onClick"/>
+            <ImageButton
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_toRightOf="@id/center3"
-                android:layout_alignTop="@+id/center3"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"
                 android:src="@drawable/pepper"
-                android:id="@+id/imgpa"/>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <View
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
-                android:id="@+id/center" />
+                android:id="@+id/btnpa"
+                android:onClick="onClick"/>
+        </GridLayout>
+        <!--
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="5"
+            android:rowCount="2">
             <Button
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_above="@id/center"
-                android:layout_alignLeft="@+id/center"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="0"
                 android:background="@drawable/button_customize"
+                android:layout_gravity="center"
                 android:id="@+id/btngu"
                 android:onClick="onClick"/>
             <Button
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_toLeftOf="@+id/center"
-                android:layout_alignTop="@+id/center"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="1"
                 android:background="@drawable/button_customize"
+                android:layout_gravity="center"
                 android:id="@+id/btnchoki"
                 android:onClick="onClick"/>
             <Button
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_toRightOf="@+id/center"
-                android:layout_alignTop="@+id/center"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="1"
                 android:background="@drawable/button_customize"
+                android:layout_gravity="center"
                 android:id="@+id/btnpa"
                 android:onClick="onClick"/>
-        </RelativeLayout>
+        </GridLayout>
 
     </FrameLayout>
-
-    <!--
-    <ImageButton
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="@drawable/button_customize"
-        android:padding="80px"
-        android:scaleType="centerInside"
-        android:src="@drawable/rock"
-        android:layout_above="@id/center"
-        android:layout_alignLeft="@+id/center"
-        android:id="@+id/btngu"
-        android:onClick="onClick"/>
-    <ImageButton
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="@drawable/button_customize"
-        android:padding="80px"
-        android:scaleType="centerInside"
-        android:src="@drawable/pepper"
-        android:layout_toRightOf="@+id/center"
-        android:layout_alignTop="@+id/center"
-        android:id="@+id/btnpa"
-        android:onClick="onClick"/>
-    <ImageButton
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="@drawable/button_customize"
-        android:padding="80px"
-        android:scaleType="centerInside"
-        android:src="@drawable/scissors"
-        android:layout_toLeftOf="@+id/center"
-        android:layout_alignTop="@+id/center"
-        android:id="@+id/btnchoki"
-        android:onClick="onClick"/>
-        -->
-    </RelativeLayout>
+    -->
+    </LinearLayout>
