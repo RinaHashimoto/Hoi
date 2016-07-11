@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/janken"
+        android:id="@+id/textjanken"
         android:textSize="40sp"/>
     <ImageView
         android:layout_width="800px"
@@ -134,4 +134,4 @@
         android:id="@+id/btnchoki"
         android:onClick="onClick"/>
         -->
-    </RelativeLayout>
+</RelativeLayout>

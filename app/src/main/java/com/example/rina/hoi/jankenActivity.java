@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class jankenActivity extends AppCompatActivity {
 
@@ -11,6 +12,15 @@ public class jankenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_janken);
+
+        Globals globals = (Globals) this.getApplication();
+        TextView textView = (TextView) findViewById(R.id.textjanken);
+        if(globals.jankenResult == 0){
+            textView.setText("あ〜いこ〜で");
+        }else{
+            textView.setText("じゃ〜んけ〜ん");
+        }
+
     }
 
 

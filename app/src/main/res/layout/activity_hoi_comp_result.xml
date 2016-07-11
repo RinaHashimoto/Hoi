@@ -13,21 +13,33 @@
         android:layout_centerHorizontal="true"
         android:text="@string/hoi"
         android:textSize="40sp"/>
+
     <ImageView
-        android:layout_width="800px"
-        android:layout_height="800px"
+        android:layout_width="353dp"
+        android:layout_height="353dp"
         android:padding="100px"
         android:adjustViewBounds="true"
-        android:id="@+id/imgjankenface"
+        android:id="@+id/imghoidircomp"
         android:scaleType="centerInside"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/sample"/>
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="289dp"
+        android:layout_height="289dp"
+        android:padding="100px"
+        android:adjustViewBounds="true"
+        android:id="@+id/imghoidiruser"
+        android:scaleType="centerInside"
+        android:layout_centerHorizontal="true"/>
+
+
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_color"
         android:text="@string/next"
-        android:id="@+id/btnToResult"
+        android:id="@+id/btnToNext"
         android:textSize="40sp"
         android:padding="20px"
         android:onClick="onClick"/>

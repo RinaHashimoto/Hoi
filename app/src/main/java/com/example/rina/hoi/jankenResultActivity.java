@@ -5,31 +5,41 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Random;
 
 public class jankenResultActivity extends AppCompatActivity {
     int imghandComputer;
+    int imghandUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
          Intent intent = getIntent();
         int handUser = intent.getIntExtra("userHand",0);
-        int result = janken(handUser);
-        System.out.println(result);
-        //switch (result) {
-           // case 0://あいこ
 
-                //imageView0.setImageResource(imghandComputer);
+        if(handUser == 0){
+            imghandUser = R.drawable.rock;
+        }else if(handUser == 1){
+            imghandUser = R.drawable.scissors;
+        }else{
+            imghandUser = R.drawable.pepper;
+        }
 
-           // case 1://ユーザーの勝ち
-
-            //case 2://コンピュータの勝ち
-        //}
         setContentView(R.layout.activity_janken_result);
-        ImageView imageView0 = (ImageView)findViewById(R.id.imgjankenface);
+
+        Globals globals = (Globals) this.getApplication();
+        TextView textView = (TextView) findViewById(R.id.textView);
+        if(globals.jankenResult == 0)textView.setText("しょっ！");
+        else textView.setText("ぽん！");
+
+        globals.jankenResult = janken(handUser);
+
+        ImageView imageView0 = (ImageView)findViewById(R.id.imgjankenCompHand);
+        ImageView imageView1 = (ImageView)findViewById(R.id.imgjankenUserHand);
         imageView0.setImageResource(imghandComputer);
+        imageView1.setImageResource(imghandUser);
     }
 
 
@@ -38,14 +48,11 @@ public class jankenResultActivity extends AppCompatActivity {
         int handComputer = rand.nextInt(3);
 System.out.println("a");
         if(handComputer==0){
-            System.out.print("コンピュータはグー　");
-            imghandComputer = R.drawable.rock;
+            imghandComputer = R.drawable.frog_hand_rock;
         }else if(handComputer==1){
-            System.out.print("コンピュータはチョキ　");
-            imghandComputer = R.drawable.scissors;
+            imghandComputer = R.drawable.frog_hand_scissors;
         }else{
-           System.out.print("コンピュータはパー　");
-            imghandComputer = R.drawable.pepper;
+            imghandComputer = R.drawable.frog_hand_paper;
         }
         if(handUser==handComputer){
             return 0;//あいこ
