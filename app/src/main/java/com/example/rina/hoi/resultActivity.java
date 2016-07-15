@@ -14,9 +14,9 @@ public class resultActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.textresult);
         Globals globals = (Globals) this.getApplication();
         if(globals.compScore>globals.userScore){
-            textView.setText(globals.compScore+"対"+globals.userScore+"であなたの負け!");
+            textView.setText(globals.userScore+"対"+globals.compScore+"であなたの負け!");
         }else{
-            textView.setText(globals.compScore+"対"+globals.userScore+"であなたの勝ち!");
+            textView.setText(globals.userScore+"対"+globals.compScore+"であなたの勝ち!");
         }
     }
 
